@@ -1,0 +1,54 @@
+
+
+
+ 
+ 几何应用
+
+ 标架 (O,e) 到 (O',e')的变换可以通过点P的径向向量计算
+ P=ex=ea+e'x', 其中  a是O'在(O,e)下的坐标, 即 O'=ea.  
+ e(x-a)=e'x'
+ 
+ 若记 e'=eA, 则 A 的 j 列就是 e'j 的坐标.   右乘. 取逆后左乘.  
+
+x-a=Ax'
+
+记 B 为 A 的逆矩阵, 即 A 的 转置矩阵, 则
+x'=B(x-a)
+此时 B 的 i 行就是 e'i 的坐标. 
+对应得齐次坐标下的矩阵为
+
+C=  B   -Ba
+    0     1
+
+也就是  glLookAt 所设置的矩阵 ModelView Matrix. 
+注意还要乘以原来的矩阵. 
+
+ 
+
+
+
+
+https://www.cnblogs.com/stanley0614/articles/3486606.html
+
+gluLookAt 源代码
+
+
+
+
+https://blog.csdn.net/zhouxuguang236/article/details/44999529
+
+glFrustum与glPerspective的关系
+
+
+Rt=(l,t,r,b) ,  n  <-------->   fov, aspect, n
+
+aspect = (r-l)/(t-b)    =   w/h  
+tg(fov/2)=(t-b)/2n 
+
+
+(left, right, bottom, top) = 
+(-n * tan(fov / 2.0) * aspect,     n * tan(fov / 2.0) * aspect,  -n * tan(fov / 2.0),  n * tan(fov / 2.0) )
+ 
+
+
+

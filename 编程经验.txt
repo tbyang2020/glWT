@@ -1,0 +1,74 @@
+
+
+
+
+模板实现为什么应当放在头文件中
+c++编译期间不能决定模板参数的类型,  不能生成实例, 会带到链接期间. 
+此时若无调用特定类型实例, 则会导致错误 LINK1120、2019.
+
+
+
+
+
+C2572 默认参数重定义
+有时不产生此错误? 这种情况如何造成?
+
+
+
+
+
+ #if PRE_DEFS
+
+
+WIN32
+_WINDOWS
+_DEBUG
+_USRDLL
+_WINDLL
+USE_STD_NAMESPACE
+TESS_EXPORTS
+LIBLEPT_IMPORTS
+WINDLLNAME = "$(TargetFileName)"
+
+
+ #endif  
+
+
+
+
+
+注意! CurrentDirectory 会因为浏览文件而实时改变!
+
+
+
+
+
+
+
+
+
+
+
+
+项目 tesseract  包含目录
+D:\TbyangW10\2019文字识别\tesseract-gui\leptonica-master\src
+D:\TbyangW10\2019文字识别\tesseract-gui\leptonica-master\build\src
+修改为相对目录, 以便于工程文件夹位置变动
+../../leptonica-master\src
+../../leptonica-master\build\src
+
+
+
+
+
+
+// 链接器/系统:  窗口 (/SUBSYSTEM:CONSOLE) --> 窗口 (/SUBSYSTEM:WINDOWS), 需要提供 WinMain 函数 
+
+
+
+ccs.idFirstChild = 0; 
+MDI 自动管理窗口ID 
+
+
+
+  
