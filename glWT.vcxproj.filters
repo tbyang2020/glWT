@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="InterfaceMDI">
+      <UniqueIdentifier>{d3af02b6-f392-4f63-b78b-33a92509213a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="glFont2021">
+      <UniqueIdentifier>{e21fbe72-41bc-4890-99b3-1a567cac1e42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="InterfaceMDI\res">
+      <UniqueIdentifier>{7cc8f826-b50f-4eba-9660-453e4a851d92}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="InterfaceMDI\InterfaceMDI.cpp">
+      <Filter>InterfaceMDI</Filter>
+    </ClCompile>
+    <ClCompile Include="InterfaceMDI\qTrace.cpp">
+      <Filter>InterfaceMDI</Filter>
+    </ClCompile>
+    <ClCompile Include="glWT.cpp" />
+    <ClCompile Include="glFont2021\glFont2021.cpp">
+      <Filter>glFont2021</Filter>
+    </ClCompile>
+    <ClCompile Include="Matrix.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="InterfaceMDI\InterfaceMDI.h">
+      <Filter>InterfaceMDI</Filter>
+    </ClInclude>
+    <ClInclude Include="InterfaceMDI\qTrace.h">
+      <Filter>InterfaceMDI</Filter>
+    </ClInclude>
+    <ClInclude Include="glWT.h" />
+    <ClInclude Include="glFont2021\glFont2021.h">
+      <Filter>glFont2021</Filter>
+    </ClInclude>
+    <ClInclude Include="InterfaceMDI\res\resource.h">
+      <Filter>InterfaceMDI\res</Filter>
+    </ClInclude>
+    <ClInclude Include="Matrix.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="奇妙的拟合.txt" />
+    <Text Include="InterfaceMDI\编程经验.txt" />
+    <Text Include="InterfaceMDI\几何应用.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="InterfaceMDI\res\InterfaceMDI.rc">
+      <Filter>InterfaceMDI\res</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="InterfaceMDI\res\icon1.ico" />
+    <Image Include="InterfaceMDI\res\bitmap1.bmp" />
+    <Image Include="InterfaceMDI\res\bitmap2.bmp" />
+  </ItemGroup>
+</Project>
